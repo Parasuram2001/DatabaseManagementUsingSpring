@@ -1,0 +1,14 @@
+package com.example.coffer.service.impl;
+
+import java.util.List;
+
+import com.example.coffer.model.DataTable;
+
+public class DataServiceImpl implements DataService{
+
+    @Override
+    public List<DataTable> getAllData() {
+        throw new UnsupportedOperationException("Unimplemented method 'getAllData'");
+    }
+    
+}

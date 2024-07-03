@@ -1,0 +1,24 @@
+package com.example.coffer.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.Data;
+@Data
+@Entity
+public class DataTable {
+    @Id
+    private long endYear;
+    private int intensity;
+    private String sector;
+    private String topic;
+    private String swot;
+    private String region;
+    private int startYear;
+    private String city;
+    private String country;
+    private int relevance;
+    private String pestle;
+    private String source;
+    private int likelihood;
+    
+}

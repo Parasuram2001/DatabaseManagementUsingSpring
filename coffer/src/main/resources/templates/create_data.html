@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Management</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style="background-color: blanchedalmond;">
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">Manage Data</a>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/datalist1}">Data Management</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <br>
+
+    <div class="container" style="width: 100%;">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+                <!--col-lg-6 to fit the data for larger device-->
+                <!--col-md-6 to fit the data for medium size device-->
+                <!--col-sm-6 to fit the data for smaller size device-->
+                <h1 class="text-center">Create Data</h1>
+                <div class="card-body" style="background-image: repeating-radial-gradient(rgb(170, 199, 91),rgb(94, 229, 139),rgb(220, 88, 222));">
+                    <form th:action="@{/datalist}" th:object="${data1}" method="post">
+
+                        <div class="form-group ">
+                            <label for="ey"><h4>EndYear</h4></label>
+                            <input id="ey" type="number" name="ENDYEAR" th:field="*{endYear}" class="form-control"  placeholder="Enter the endyear">
+                            <!--th:field="endYear" endYear is the variable name given in DataTable-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="in"><h4>Intensity</h4></label>
+                            <input id="in" type="number" name="INTENSITY" th:field="*{intensity}" class="form-control"  placeholder="Enter the intensity">
+                            <!--th:field="endYear" endYear is the variable name given in DataTable-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="se"><h4>Sector</h4></label>
+                            <input id="se" type="text" name="SECTOR" th:field="*{sector}" class="form-control"  placeholder="Enter the sector">
+                            <!--th:field="endYear" endYear is the variable name given in DataTable-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="to"><h4>Topic</h4></label>
+                            <input id="to" type="text" name="TOPIC" th:field="*{topic}" class="form-control"  placeholder="Enter the topic">
+                            <!--th:field="endYear" endYear is the variable name given in DataTable-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sw"><h4>Swot</h4></label>
+                            <input id="sw" type="text" name="SWOT" th:field="*{swot}" class="form-control"  placeholder="Enter the swot">
+                            <!--th:field="endYear" endYear is the variable name given in DataTable-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="re"><h4>Region</h4></label>
+                            <input id="re" type="text" name="REGION" th:field="*{region}" class="form-control"  placeholder="Enter the region">
+                            <!--th:field="endYear" endYear is the variable name given in DataTable-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sy"><h4>StartYear</h4></label>
+                            <input id="sy" type="number" name="STARTYEAR" th:field="*{startYear}" class="form-control"  placeholder="Enter the startyear">
+                            <!--th:field="endYear" endYear is the variable name given in DataTable-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ci"><h4>City</h4></label>
+                            <input id="ci" type="text" name="CITY" th:field="*{city}" class="form-control"  placeholder="Enter the city">
+                            <!--th:field="endYear" endYear is the variable name given in DataTable-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="co"><h4>Country</h4></label>
+                            <input id="co" type="text" name="COUNTRY" th:field="*{country}" class="form-control"  placeholder="Enter the country">
+                            <!--th:field="endYear" endYear is the variable name given in DataTable-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="re"><h4>Relevance</h4></label>
+                            <input id="re" type="number" name="RELEVANCE" th:field="*{relevance}" class="form-control"  placeholder="Enter the relevance">
+                            <!--th:field="endYear" endYear is the variable name given in DataTable-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pe"><h4>Pestle</h4></label>
+                            <input id="pe" type="text" name="PESTLE" th:field="*{pestle}" class="form-control"  placeholder="Enter the pestle">
+                            <!--th:field="endYear" endYear is the variable name given in DataTable-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="so"><h4>Pestle</h4></label>
+                            <input id="so" type="text" name="SOURCE" th:field="*{source}" class="form-control"  placeholder="Enter the source">
+                            <!--th:field="endYear" endYear is the variable name given in DataTable-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="li"><h4>Likelihood</h4></label>
+                            <input id="li" type="number" name="LIKELIHOOD" th:field="*{likelihood}" class="form-control"  placeholder="Enter the likelihood">
+                            <!--th:field="endYear" endYear is the variable name given in DataTable-->
+                        </div>
+
+                        <div class="box-footer">
+                            <button type="submit" class="btn btn-primary" style="position: relative;left: 39%;">Submit</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
